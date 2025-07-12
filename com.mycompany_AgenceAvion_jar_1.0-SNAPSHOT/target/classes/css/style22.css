@@ -1,0 +1,221 @@
+/* Fichier CSS pour styliser les interfaces JavaFX de l'application de gestion d'agence de voyage */
+
+/* --- Paramètres généraux --- */
+.root {
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -fx-background-color: #e0f7fa; /* Couleur de fond légère et apaisante */
+    -fx-text-fill: #333; /* Couleur du texte */
+    -fx-background-image: url('../Images/bg2.png');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+/* --- Styles des boutons --- */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #0288d1, #0277bd);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8 16;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 4, 0, 0, 2);
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #0277bd, #01579b);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 6, 0, 0, 3); /* Ajout d'un effet de survol */
+}
+
+.button:pressed {
+    -fx-background-color: #01579b;
+    -fx-effect: none;
+}
+
+/* --- Styles des champs de texte --- */
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-border-color: #bbb;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 11;
+    -fx-padding: 8;
+    -fx-font-size: 14px;
+    -fx-transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #0288d1;
+    -fx-effect: dropshadow(gaussian, rgba(2, 136, 209, 0.5), 4, 0, 0, 2);
+}
+
+/* --- Styles des étiquettes --- */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+.label.title {
+    -fx-font-size: 28px;
+    -fx-text-fill: #0288d1;
+    -fx-font-weight: bold;
+    -fx-padding: 15 0;
+    -fx-transition: color 0.3s ease;
+}
+
+.label.title:hover {
+    -fx-text-fill: #01579b;
+}
+
+/* --- Styles des tableaux (TableView) --- */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5;
+    -fx-padding: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 8, 0, 0, 2);
+}
+
+.table-view .column-header {
+    -fx-background-color: #e0f7fa;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.table-view .cell {
+    -fx-border-color: #ddd;
+    -fx-padding: 8;
+}
+
+/* --- Styles des onglets (TabPane) --- */
+.tab-pane {
+    -fx-tab-min-width: 120;
+    -fx-tab-max-width: 200;
+    -fx-tab-min-height: 40;
+    -fx-tab-max-height: 40;
+    -fx-background-color: transparent;
+}
+
+.tab {
+    -fx-background-color: #0288d1;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-transition: all 0.3s ease;
+}
+
+.tab:hover {
+    -fx-background-color: #0277bd;
+}
+
+.tab:selected {
+    -fx-background-color: #01579b;
+    -fx-font-weight: bold;
+}
+
+/* --- Styles des panneaux (Pane) --- */
+.pane {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-padding: 20;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0, 0, 2);
+    -fx-transition: all 0.3s ease;
+}
+
+/* --- Styles des boîtes de dialogue (DialogPane) --- */
+.dialog-pane {
+    -fx-background-color: white;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 8;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0, 0, 2);
+    -fx-transition: all 0.3s ease;
+}
+
+/* --- Styles des boîtes de groupement (TitledPane) --- */
+.titled-pane > .title {
+    -fx-background-color: #0288d1;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.titled-pane > .content {
+    -fx-background-color: white;
+}
+
+/* --- Styles des DatePicker --- */
+.date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #bbb;
+    -fx-border-width: 1;
+    -fx-border-radius: 10 0 0 10;
+    -fx-background-radius: 11 0 0 11;
+    -fx-font-size: 14px;
+    -fx-transition: border-color 0.3s ease, width 0.3s ease; 
+    -fx-pref-width: 130px; /* Largeur préférée */ 
+    -fx-min-width: 130px; /* Largeur minimale */ 
+    -fx-max-width: 130px; /* Largeur maximale */
+    -fx-transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.date-picker:focused {
+    -fx-border-color: #0288d1;
+    -fx-effect: dropshadow(gaussian, rgba(2, 136, 209, 0.5), 4, 0, 0, 2);
+    -fx-pref-width: 130px; /* Largeur préférée lorsque l'élément est focalisé */
+    -fx-min-width: 130px;  /* Largeur minimale lorsque l'élément est focalisé */
+    -fx-max-width: 130px;  /* Largeur maximale lorsque l'élément est focalisé */
+}
+
+
+.date-picker .arrow-button {
+    -fx-cursor: hand;
+    -fx-font-size: 15px;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #0288d1;
+}
+
+.date-picker:hover {
+    -fx-border-color: #0288d1;
+}
+
+
+.date-picker-popup{
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0, 0, 2);
+    -fx-background-image: none; /* Supprime l'image de fond */
+    -fx-background-color: white; /* Définit une couleur de fond unie */
+    -fx-border-color: #ddd; /* Bordure autour du calendrier */
+}
+
+/* Cibler le popup du DatePicker */
+.date-picker-popup .root, .combo-box-popup .root, .date-picker-popup, .combo-box-popup {
+    -fx-background-color: white; /* Arrière-plan blanc */
+    -fx-border-color: transparent;
+    -fx-background-image: none;
+    -fx-border-radius: 10;
+}
+
+
+
+/* Style pour le ScrollPane pour le rendre transparent */
+.scroll-pane {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Styles pour améliorer la netteté des éléments */
+.label, .button, .combo-box, .text-field, .date-picker {
+    -fx-font-smoothing-type: lcd;
+}
+
+
+
